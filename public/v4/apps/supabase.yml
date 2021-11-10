@@ -5,11 +5,11 @@ services:
         volumes:
             - $$cap_appname-kong-config:/var/lib/kong
         restart: always
-         ports:
-             - $$cap_kong_http_port:8000
-             - $$cap_kong_https_port:8443
-             - $$cap_kong_admin_port:8001
-             - $$cap_kong_admin_ssl_port:8444
+        ports:
+            - $$cap_kong_http_port:8000
+            - $$cap_kong_https_port:8443
+            - $$cap_kong_admin_port:8001
+            - $$cap_kong_admin_ssl_port:8444
         environment:
             KONG_DATABASE: $$cap_kong_database
             # https://github.com/supabase/cli/issues/14
